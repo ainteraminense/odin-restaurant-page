@@ -13,6 +13,17 @@ export function createHome() {
     let p = document.createElement("p");
     p.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nulla enim adipisci, magni accusamus assumenda doloremque, vel minima aut quaerat, quo voluptate. Dignissimos quasi qui eos labore aspernatur accusamus iure.";
 
+    // highlight active
+    let buttons = document.querySelectorAll("button");
+    let activeBtn = buttons.forEach((btn) => {
+        if (btn.classList.contains("active")) {
+            return btn;
+        }
+    });
+    if (activeBtn) activeBtn.classList.remove("active");
+    activeBtn = document.querySelector("#home");
+    activeBtn.classList.add("active");
+
     main.appendChild(header);
     main.appendChild(img);
     main.appendChild(p);

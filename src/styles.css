@@ -24,3 +24,9 @@ nav button {
     color: #c3cf44;
 }
 
+nav button.active {
+    background-color: #6b7038;
+    border-color: #c3cf44;
+    color: #c3cf44;
+}
+
