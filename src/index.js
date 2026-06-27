@@ -3,36 +3,44 @@ import { createHome } from "./home.js";
 import { createMenu } from "./menu.js";
 import { createContact } from "./contact.js";
 
-createHome();
+
 
 let buttons = document.querySelectorAll("button");
-//[...buttons].forEach((btn) => btn.addEventListener("click", (e) => {
-    // switch (e.target.id) {
-    //     case "home":
-    //         return createHome;
-    //         break;
-    //     case "menu":
-    //         return createMenu;
-    //         break;
-    //     case "contact":
-    //         return createContact;
-    //         break;
-    //     default:
-    //         console.log("Something went wrong");
-    // }
-//}))
+let activeBtn;
+addActiveBtn(buttons[0]);
+
+createHome();
+
 [...buttons].forEach((btn) => { 
     switch (btn.id) {
         case "home":
-            btn.addEventListener("click", createHome);
+            btn.addEventListener("click", () => {
+                addActiveBtn(btn);
+                createHome();
+            }); 
             break;
         case "menu":
-            btn.addEventListener("click", createMenu);
+            btn.addEventListener("click", () => {
+                addActiveBtn(btn);
+                createMenu();
+            }); 
             break;
         case "contact":
-            btn.addEventListener("click", createContact);
+            btn.addEventListener("click", () => {
+                addActiveBtn(btn);
+                createContact();
+            }); 
             break;
         default:
             console.log("Something wrong");
     }
 });
+
+export function addActiveBtn (btn) {
+    if (!activeBtn) {
+        activeBtn = buttons[0];
+    }
+    activeBtn.classList.remove("active");
+    activeBtn = btn;
+    activeBtn.classList.add("active");
+}

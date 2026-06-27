@@ -1,7 +1,9 @@
 import tofuBasil from "./tofu-basil.jpg";
+//import { addActiveBtn } from "./activeBtn.js";
 
 export function createMenu() {
-    console.log("Opening Contact");
+    //addActiveBtn(btn)
+
     let main = document.querySelector("#content");
     // create content
     main.innerHTML = "";
@@ -33,5 +35,4 @@ export function createMenu() {
     div.appendChild(divLeft);
     div.appendChild(divRight);
     main.append(div);
-
 }

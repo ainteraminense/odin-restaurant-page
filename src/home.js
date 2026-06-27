@@ -1,6 +1,9 @@
 import restaurantImage from "./restaurant.jpg";
+//import { addActiveBtn } from "./activeBtn.js";
 
 export function createHome() {
+    //addActiveBtn(btn)
+
     let main = document.querySelector("#content");
     // create content
     let header = document.createElement("h1");
@@ -13,16 +16,16 @@ export function createHome() {
     let p = document.createElement("p");
     p.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nulla enim adipisci, magni accusamus assumenda doloremque, vel minima aut quaerat, quo voluptate. Dignissimos quasi qui eos labore aspernatur accusamus iure.";
 
-    // highlight active
-    let buttons = document.querySelectorAll("button");
-    let activeBtn = buttons.forEach((btn) => {
-        if (btn.classList.contains("active")) {
-            return btn;
-        }
-    });
-    if (activeBtn) activeBtn.classList.remove("active");
-    activeBtn = document.querySelector("#home");
-    activeBtn.classList.add("active");
+    // // highlight active
+    // let buttons = document.querySelectorAll("button");
+    // let activeBtn = buttons.forEach((btn) => {
+    //     if (btn.classList.contains("active")) {
+    //         return btn;
+    //     }
+    // });
+    // if (activeBtn) activeBtn.classList.remove("active");
+    // activeBtn = document.querySelector("#home");
+    // activeBtn.classList.add("active");
 
     main.innerHTML = "";
     main.appendChild(header);
