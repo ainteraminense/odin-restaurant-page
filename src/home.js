@@ -24,6 +24,7 @@ export function createHome() {
     activeBtn = document.querySelector("#home");
     activeBtn.classList.add("active");
 
+    main.innerHTML = "";
     main.appendChild(header);
     main.appendChild(img);
     main.appendChild(p);
