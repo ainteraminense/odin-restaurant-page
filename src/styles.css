@@ -59,3 +59,24 @@ nav button.active {
 .menu p {
     margin-top: 0;
 }
+
+
+/* Contact */
+
+form {
+    border: 1px solid #8f5a46;
+    padding: 16px;
+    border-radius:8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+form div {
+    display: flex;
+    gap: 8px;
+}
+
+form textarea {
+    width: 100%;
+}
