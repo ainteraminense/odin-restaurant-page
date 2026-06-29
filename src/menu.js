@@ -1,5 +1,4 @@
 import tofuBasil from "./tofu-basil.jpg";
-//import { addActiveBtn } from "./activeBtn.js";
 
 export function createMenu() {
     //addActiveBtn(btn)
@@ -34,5 +33,4 @@ export function createMenu() {
     main.appendChild(h1);
     div.appendChild(divLeft);
     div.appendChild(divRight);
-    main.append(div);
-}
+    main.append(div);}
