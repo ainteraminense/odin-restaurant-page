@@ -28,9 +28,12 @@ export function createContact() {
     let emailDiv = document.createElement("div");
     let messageDiv = document.createElement("div");
     let submitButton = document.createElement("button");
+    submitButton.classList.add("submit");
     submitButton.textContent = "Submit";
     let cancelButton = document.createElement("button");
+    cancelButton.classList.add("cancel");
     cancelButton.textContent = "Cancel";
+    let buttonsDiv = document.createElement("div");
     nameDiv.appendChild(nameLabel);
     nameDiv.appendChild(nameInput);
     emailDiv.appendChild(emailLabel);
@@ -40,8 +43,9 @@ export function createContact() {
     form.appendChild(emailDiv); 
     form.appendChild(messageLabel);
     form.appendChild(messageDiv); 
-    form.appendChild(cancelButton);
-    form.appendChild(submitButton);
+    buttonsDiv.appendChild(cancelButton);
+    buttonsDiv.appendChild(submitButton);
+    form.appendChild(buttonsDiv);
     main.appendChild(h1);
     main.appendChild(form);
 }

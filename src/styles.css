@@ -80,3 +80,27 @@ form div {
 form textarea {
     width: 100%;
 }
+
+form div:last-of-type{
+    display: flex;
+    justify-content: end;
+    margin-top: 16px;
+}
+
+form button {
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+.cancel {
+    background-color: #FFF;
+    border: solid 1px #6b7038;
+    color: #6b7038;
+}
+
+.submit {
+    background-color: #c3cf44;
+    border: solid 1px #8f5a46;
+    color: #8f5a46;
+    font-weight: bolder;
+}
