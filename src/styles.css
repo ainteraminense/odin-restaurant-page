@@ -1,14 +1,28 @@
+html,
 body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+body,
+footer {
     margin: 0;
     color: #6b7038;
 }
 
-nav {
+nav,
+footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #c3cf44;
     padding: 16px 8px;
+}
+
+footer {
+   justify-content: center;
+   margin-top: auto;
 }
 
 nav h6 {
@@ -34,7 +48,9 @@ nav button.active {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 0 32px;
+    flex: 1;
 }
 
 /* Menu */
